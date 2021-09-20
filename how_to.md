@@ -19,17 +19,3 @@ This repo contains documentation for internal use of PC Engines GmbH.
 *   [Disk Images](./disk_images.html)
 *   [Add-On Cards](./addon_cards.html)
 
-
-## Header 2
-
-
-### Header 3
-
-
-#### Header 4
-
-
-##### Header 5
-
-###### Header 6
-
