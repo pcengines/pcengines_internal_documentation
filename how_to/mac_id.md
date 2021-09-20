@@ -5,7 +5,7 @@ This is the conversion from MAC ID to serial number and vice versa:
 MAC ID = 00:0d:b9 (our OUI) : (serial + 64) * 4
 serial = (MAC ID & 0x000000FFFFFF) / 4 - 64
 
-
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript">
 
 	function calculate_mac(serial_nr){
