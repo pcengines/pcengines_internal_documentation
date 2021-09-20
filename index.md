@@ -1,11 +1,13 @@
 ---
 layout: default
 ---
+# This site is under construction
 
-# Installation USB TinyCore
+This repo contains documentation for internal use of PC Engines GmbH.
 
-[Link to another page](./another-page.html).
+## Installation USB TinyCore
 
+[Serial Console](./serial_console.html).
 
 ## Header 2
 
