@@ -1,3 +1,3 @@
 # Board Modifications
 
-[back](./)
+[back](../)

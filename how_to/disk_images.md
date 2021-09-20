@@ -1,3 +1,3 @@
 # Disk Images
 
-[back](./)
+[back](../)

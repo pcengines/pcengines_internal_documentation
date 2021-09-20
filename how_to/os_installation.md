@@ -1,3 +1,3 @@
 # OS Installation
 
-[back](./)
+[back](../)

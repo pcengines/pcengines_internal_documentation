@@ -1,3 +1,3 @@
 # Coreboot
 
-[back](./)
+[back](../)

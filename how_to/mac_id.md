@@ -30,4 +30,4 @@ serial = (MAC ID & 0x000000FFFFFF) / 4 - 64
 	<tr><td>Serial number</td><td><input id="serial_nr"></td><td><button onclick="calculate_mac($('#serial_nr').val())">calculate MAC ID</button></td></tr>
 </table>
 
-[back](./)
+[back](../)

@@ -1,3 +1,3 @@
 # TinyCore
 
-[back](./)
+[back](../)

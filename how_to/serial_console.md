@@ -12,4 +12,4 @@ Pressing the button S1 while powering up, temporarily enables a previously in th
 
 To test if an apu board boots up, even if there is no serial console, boot it with TinyCore and a beep should be heard after about 30s-40s.
 
-[back](./)
+[back](../)

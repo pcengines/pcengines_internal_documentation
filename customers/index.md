@@ -1,3 +1,3 @@
 # Preassembly Instructions
 
-[back](./)
+[back](../)

@@ -1,3 +1,3 @@
 # GPIO's
 
-[back](./)
+[back](../)
