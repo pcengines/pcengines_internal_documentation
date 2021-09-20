@@ -7,13 +7,6 @@ This repo contains documentation for internal use of PC Engines GmbH.
 
 ## Topics
 
-<!-- 
-{% unless file.path contains 'docinfo.html' %}
-     {% if file.extname == 'md' or file.extname == 'html'  %}
-	      <li><a href="{{ site.baseurl }}{{ file.basename | append '.html' }}">{{ file.basename | capitalize }}</a></li>
-{% endunless %}
- -->
-
 {% assign filelist = site.static_files  %}
 <ul>
   {% for file in filelist %}
