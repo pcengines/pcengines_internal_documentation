@@ -5,7 +5,7 @@ layout: default
 
 This repo contains documentation for internal use of PC Engines GmbH.
 
-## Pages
+## Pages 1
 
 {% assign filelist = site.static_files  %}
 <ul>
