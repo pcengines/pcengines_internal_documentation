@@ -5,14 +5,12 @@ layout: default
 
 This repo contains documentation for internal use of PC Engines GmbH.
 
-## Topics
+## Pages
 
 {% assign filelist = site.static_files  %}
 <ul>
   {% for file in filelist %}
-     {% if file.extname == 'md' or file.extname == 'html'   %}
-	      <li><a href="{{ site.baseurl }}{{ file.basename | append: '.html' }}">{{ file.basename | capitalize }}</a></li>
-	{% endif %}
+      <li><a href="{{ site.baseurl }}{{ file.basename | append: '.html' }}">{{ file.basename | capitalize }}</a></li>
   {% endfor %}
 </ul>
 
