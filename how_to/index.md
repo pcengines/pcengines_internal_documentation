@@ -20,3 +20,6 @@ This repo contains documentation for internal use of PC Engines GmbH.
 
 
 [back](../)
+
+
+{{ site.time }}
