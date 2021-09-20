@@ -7,6 +7,16 @@ This repo contains documentation for internal use of PC Engines GmbH.
 
 ## Topics
 
+<ul>
+	{% for file in site.images %}
+	     {% if file.extname == 'md' or file.extname == 'html'  %}
+	         <li><a href="{{ file.url }}">{{ file.url | capitalize }}</a>
+	     {% endif %}
+	{% endfor %}
+</ul>
+
+<hr>
+
 {% assign filelist = site.static_files  %}
 <ul>
   {% for file in filelist %}
@@ -16,16 +26,5 @@ This repo contains documentation for internal use of PC Engines GmbH.
   {% endfor %}
 </ul>
 
-
-{% assign filelist = site.static_files  %}
-{% for file in filelist %}
-	{% unless file.path contains 'docinfo.html' %}
-	    *   [ {{ file.name }} ]( {{ site.baseurl }}{{ file.path }})
-	{% endunless %}
-{% endfor %}
-
-
-*   [Disk Images](./disk_images.html)
-*   [Add-On Cards](./addon_cards.html)
 
 [back](../)
