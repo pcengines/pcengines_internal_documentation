@@ -13,6 +13,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
 	{% if file.path contains 'how_to' %}
 	     {% if file.extname == 'md'  %}
 		      <li><a href="{{ site.baseurl }}{{ file.basename | append '.html' }}">{{ file.basename | capitalize }}</a></li>
+		{% endif %}
 	{% endif %}
   {% endfor %}
 </ul>
