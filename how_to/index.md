@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-# PC Engines - How To's
+# How To's
 
 This repo contains documentation for internal use of PC Engines GmbH.
 

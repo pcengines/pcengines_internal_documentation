@@ -1,3 +1,3 @@
-# Voyage Linux
+# Board Modifications
 
 [back](./)
