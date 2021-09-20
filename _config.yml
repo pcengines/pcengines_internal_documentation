@@ -154,6 +154,7 @@ include:
   - .htaccess
   - _pages
   - README.md
+  - README.html
   - README
   
 exclude:
