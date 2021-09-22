@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/print.css' | relative_url }}" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+{% seo %}
+    {% include head-custom.html %}
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <!-- <h1><a href="../">{{ page.title | default: site.title | default: site.github.repository_name }}</a></h1> -->
+          <h2><a href="{{ "/" | relative_url }}">{{ page.description | default: site.description | default: site.github.project_tagline }}</a></h2>
+        </header>
+        <hr>
+        
+        ## Topics 
+
+        <ul>
+        {%- assign filelist = site.static_files -%}
+
+        {%- assign topfolders = ''|split:'' -%}
+        {%- for file in filelist -%}
+          {%- assign topfolder = file.path | split: "/" -%}
+          {%- unless topfolder[1] contains ".md" or topfolder[1] contains "LICENSE" or topfolder[1] contains "assets" or topfolder[1] contains "thumbnail.png" or topfolder[1] contains "script" or topfolder[1] contains "jekyll-theme-tactile.gemspec" or topfolder[1] contains "docs" -%}
+          {%- assign topfolders = topfolders | push: topfolder[1] -%}
+          {%- endunless -%}
+        {%- endfor -%}
+
+        {%- assign topfolders = topfolders | uniq -%}
+        {%- for folder in topfolders -%}
+          <li><a class="page-link" href="{{ "./" | append: folder }}">{{ folder | split: "_" | join: " " | capitalize | escape }}</a></li>
+        {%- endfor -%}
+        </ul>
+
+
+        <section id="main_content">
+          {{ content }}
+        </section>
+
+        <footer>
+        {% if site.github.is_project_page %}
+          {{ site.title | default: site.github.repository_name }} is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a><br>
+        {% endif %}
+        </footer>
+
+      </div>
+    </div>
+  </body>
+</html>
