@@ -13,36 +13,6 @@ This repo contains documentation for internal use of PC Engines GmbH.
 *   [Board Modifications](./board_mods/index.html)
 *   [ECN](./ecn/index.html)
 
-## Top Level Pages Only
-
-
-<ul>
-{%- assign filelist = site.static_files -%}
-{%- for file in filelist -%}
-  {%- assign filepath = "/" | append: file.basename | append: ".md" -%}
-  {%- if file.path == filepath -%}
-    <li><a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
-  {%- else -%}
-    <!-- <li>{{ file.path }} != {{ filepath }}<a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li> -->
-  {%- endif -%}
-{%- endfor -%}
-</ul>
-
-## Pages in Sub-Folders 
-
-<ul>
-{%- assign default_paths = site.pages | map: "path" -%}
-{%- assign page_paths = site.header_pages | default: default_paths -%}
-{%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-
-{%- for path in page_paths -%}
-  {%- assign my_page = site.pages | where: "path", path | first -%}
-  {%- if my_page.title -%}
-    <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
-  {%- endif -%}
-{%- endfor -%}
-</ul>
-
 ## Top Folders 
 
 <ul>
@@ -61,11 +31,45 @@ This repo contains documentation for internal use of PC Engines GmbH.
 <ul>
 {%- assign topfolders = topfolders | uniq -%}
 {%- for folder in topfolders -%}
-  <li>{{ folder }}</li>
+  <li><a class="page-link" href="{{ "./" | append: folder }}">{{ folder.title | escape }} + {{ folder.name | escape }} + {{ folder.path | escape }}</a></li>
 {%- endfor -%}
 </ul>
 
-[back](../)
+
+## Top Level Pages Only
+
+
+<ul>
+{%- assign filelist = site.static_files -%}
+{%- for file in filelist -%}
+  {%- assign filepath = "/" | append: file.basename | append: ".md" -%}
+  {%- if file.path == filepath -%}
+    <li><a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
+  {%- else -%}
+    <!-- <li>{{ file.path }} != {{ filepath }}<a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li> -->
+  {%- endif -%}
+{%- endfor -%}
+</ul>
+
+<!-- 
+## Pages in Sub-Folders 
+
+<ul>
+{%- assign default_paths = site.pages | map: "path" -%}
+{%- assign page_paths = site.header_pages | default: default_paths -%}
+{%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+
+{%- for path in page_paths -%}
+  {%- assign my_page = site.pages | where: "path", path | first -%}
+  {%- if my_page.title -%}
+    <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+  {%- endif -%}
+{%- endfor -%}
+</ul>
+
+ -->
+
+ [back](../)
 
 
 {{ site.time }}
