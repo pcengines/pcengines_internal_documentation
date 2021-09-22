@@ -39,7 +39,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
 
 
 <ul>
-{%- assign filelist = site.static_files -%}
+{%- assign filelist = site.pages -%}
 {%- for file in filelist -%}
   {%- assign filepath = "/" | append: file.basename | append: ".md" -%}
   {%- if file.path == filepath -%}
