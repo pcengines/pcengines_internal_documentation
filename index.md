@@ -13,14 +13,15 @@ This repo contains documentation for internal use of PC Engines GmbH.
 *   [Board Modifications](./board_mods/index.html)
 *   [ECN](./ecn/index.html)
 
+{%- assign filelist = site.static_files  -%}
+
 ## Pages in How To Folder 
 
-{%- assign filelist = site.static_files  -%}
 <ul>
   {%- for file in filelist -%}
-  {%- if file.path contains 'how_to' -%}
-    <li><a href="{{ site.baseurl }}/how_to/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
-  {%- endif -%}
+    {%- if file.path contains 'how_to' -%}
+      <li><a href="{{ site.baseurl }}/how_to/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
+    {%- endif -%}
   {%- endfor -%}
 </ul>
 
