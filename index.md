@@ -52,8 +52,9 @@ This repo contains documentation for internal use of PC Engines GmbH.
 
 {%- assign topfolders = ''|split:'' -%}
 {%- for file in filelist -%}
-  {%- assign partone = file | split: "/" | first -%}
-  {%- assign topfolders = topfolders | push:partone -%}
+  {%- assign topfolder = file | split: "/" | first -%}
+  <br> : {{ topfolder }}
+  {%- assign topfolders = topfolders | push: topfolder -%}
 {%- endfor -%}
 
 {%- assign topfolders = topfolders | uniq -%}
