@@ -24,9 +24,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
   {% endfor %}
 </ul>
 
-<hr>
-<hr>
-<hr>
+## All Pages 
 
 {%- assign default_paths = site.pages | map: "path" -%}
 {%- assign page_paths = site.header_pages | default: default_paths -%}
@@ -41,24 +39,21 @@ This repo contains documentation for internal use of PC Engines GmbH.
 </ul>
 <a href="{{ "/" | relative_url }}">Site title : {{ site.title | escape }}</a>
 
-<hr>
-<hr>
-<hr>
+## Top Level Pages Only
 
 {%- assign default_paths = site.pages | map: "path" -%}
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+{% assign filelist = site.static_files  %}
 <ul>
-{%- for path in page_paths -%}
-  {%- assign my_page = site.pages | where: "path", path | first -%}
-  <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+{%- for file in filelist -%}
+  {% if file.top-navigation %}
+    <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+  {%- endif -%}
 {%- endfor -%}
 </ul>
 <a href="{{ "/" | relative_url }}">Site title : {{ site.title | escape }}</a>
 
-<hr>
-<hr>
-<hr>
 
 
 [back](../)
