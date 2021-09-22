@@ -68,8 +68,9 @@
             {%- assign folder_name = topfolder[1] -%}
             {%- assign folder_name = folder_name | split: "/" | first -%}
             {%- if file.path == page.dir | append: file.name -%}
-              <li><a href="{{ site.baseurl }}/{{ file.path | remove: ".md" | append: ".html" }}">{{ file.name | remove: ".md" }}</a></li>
+              <li>+++ <a href="{{ site.baseurl }}/{{ file.path | remove: ".md" | append: ".html" }}">{{ file.name | remove: ".md" }}</a></li>
             {%- else -%}
+              <li>--- {{ file.path }} --- {{ page.dir | append: file.name }}</li>
               <li>file.path = {{ file.path }} :: page.dir = {{ page.dir }} :: {{ file.name }} :: {{ file.basename }} :: {{ file.extname }} <a href="{{ site.baseurl }}/{{ file.path | remove: ".md" | append: ".html" }}">{{ file.path }}</a></li>
             {%- endif -%}
           {%- endif -%}
