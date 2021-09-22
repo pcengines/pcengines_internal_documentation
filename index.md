@@ -38,7 +38,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
   {%- if file.path == "/" | append: file.basename -%}
     <li><a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
   {%- else -%}
-    <li>{{ file.path }} - <a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
+    <li>{{ file.path }} != {% "/" | append: file.basename %}<a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
   {%- endif -%}
 {%- endfor -%}
 </ul>
