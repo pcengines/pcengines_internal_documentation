@@ -5,6 +5,7 @@ layout: default
 
 This repo contains documentation for internal use of PC Engines GmbH.
 
+<!-- 
 ## Topics 
 
 *   [How To's](./how_to/index.html)
@@ -12,8 +13,9 @@ This repo contains documentation for internal use of PC Engines GmbH.
 *   [WNC Production Tests](./wnc/index.html)
 *   [Board Modifications](./board_mods/index.html)
 *   [ECN](./ecn/index.html)
+-->
 
-## Top Folders 
+## Topics 
 
 <ul>
 {%- assign filelist = site.static_files -%}
