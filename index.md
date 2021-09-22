@@ -46,12 +46,12 @@ This repo contains documentation for internal use of PC Engines GmbH.
 ## Top Folders 
 
 <ul>
-{%- assign default_paths = site.static_files -%}
+{%- assign default_paths = site.static_files | map: "path" -%}
 
 {%- assign topfolders = ''|split:'' -%}
 {%- for file in filelist -%}
   {%- assign topfolder = file.path | split: "/" -%}
-  {%- unless topfolder[1] contains ".md" or topfolder[1] contains "LICENSE" or topfolder[1] contains "assets" or topfolder[1] contains "LICENSE" -%}
+  {%- unless topfolder[1] contains ".md" or topfolder[1] contains "LICENSE" or topfolder[1] contains "assets" or topfolder[1] contains "thumbnail.png" or topfolder[1] contains "script" or topfolder[1] contains "jekyll-theme-tactile.gemspec" -%}
   {%- assign topfolders = topfolders | push: topfolder[1] -%}
    <li>{{ topfolder }} :: {{ topfolder[1] }}</li>
   {%- endunless -%}
