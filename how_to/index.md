@@ -11,7 +11,9 @@ This repo contains documentation for internal use of PC Engines GmbH.
 <ul>
   {% for file in filelist %}
 	{% if file.path contains 'how_to' %}
-		<li><a href="{{ site.baseurl }}/how_to/{{ file.basename | append: '.html' }}">{{ file.basename | capitalize }}</a></li>
+		{% assign nicename = file.basename | split: "_" % | join: " " }
+		<li><a href="{{ site.baseurl }}/how_to/{{ file.basename | append: '.html' }}">{{ nicename | capitalize }}</a></li>
+		}
 	{% endif %}
   {% endfor %}
 </ul>
