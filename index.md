@@ -23,7 +23,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
   {%- assign topfolder = file.path | split: "/" -%}
   {%- unless topfolder[1] contains ".md" or topfolder[1] contains "LICENSE" or topfolder[1] contains "assets" or topfolder[1] contains "thumbnail.png" or topfolder[1] contains "script" or topfolder[1] contains "jekyll-theme-tactile.gemspec" -%}
   {%- assign topfolders = topfolders | push: topfolder[1] -%}
-   <li>{{ topfolder }} :: {{ topfolder[1] }}</li>
+   <!-- <li>{{ topfolder }} :: {{ topfolder[1] }}</li> -->
   {%- endunless -%}
 {%- endfor -%}
 </ul>
