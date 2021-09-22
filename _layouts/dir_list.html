@@ -25,7 +25,7 @@
         <hr>
         
         <h1 id="topics">Folders</h1>
-        page.dir = {{ page.dir }}
+        <!-- page.dir = {{ page.dir }} -->
         <ul>
         {%- assign filelist = site.static_files -%}
         {%- assign topfolders = ''|split:'' -%}
@@ -36,16 +36,15 @@
             {%- assign folder_name = topfolder[1] -%}
             {%- assign folder_name = folder_name | split: "/" | first -%}
 
-        <li><a href="{{ folder_name }}">file.path = {{ file.path }} *** folder_name = {{ folder_name }}</a></li>
+        <!-- <li><a href="{{ folder_name }}">file.path = {{ file.path }} *** folder_name = {{ folder_name }}</a></li> -->
             {%- unless folder_name contains ".md" or folder_name contains "LICENSE" or folder_name contains "assets" or folder_name contains "thumbnail.png" or folder_name contains "script" or folder_name contains "jekyll-theme-tactile.gemspec" or folder_name contains "docs" -%}
             {%- assign topfolders = topfolders | push: folder_name -%}
             {%- endunless -%}
           {%- endif -%}
         {%- endfor -%}
-        <li>***</li>
         {%- assign topfolders = topfolders | uniq -%}
         {%- for folder in topfolders -%}
-          <li><a class="page-link" href="{{ "./" | append: folder }}">{{ folder | split: "_" | join: " " | capitalize | escape }}</a></li>
+          <li><a class="page-link" href="{{ "./" | append: folder }}">{{ folder | split: "_" | join: " " | escape }}</a></li>
         {%- endfor -%}
         </ul>
 
