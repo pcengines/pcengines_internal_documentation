@@ -55,7 +55,7 @@
         {%- for file in filelist -%}
           {%- if file.path contains page.dir -%}
             {%- assign filepath = file.basename | append: ".html" -%}
-            <li><a href="{{ site.baseurl }}/{{ file.path }}/{{ file.basename | append: '.html' }}">--- {{ file.path }}</a></li>
+            <li><a href="{{ site.baseurl }}/{{ file.path | remove: ".md" | append: ".html" }}">--- {{ file.path }}</a></li>
 
             {%- if file.path == filepath -%}
               <li><a href="{{ site.baseurl }}/{{ file.path }}/{{ file.basename | append: '.html' }}">+++ {{ file.basename }}</a></li>
