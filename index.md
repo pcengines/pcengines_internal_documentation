@@ -24,7 +24,15 @@ This repo contains documentation for internal use of PC Engines GmbH.
   {%- endfor -%}
 </ul>
 
+<hr>
+<hr>
+<hr>
+
 ## All Pages 
+
+<hr>
+<hr>
+<hr>
 
 {%- assign default_paths = site.pages | map: "path" -%}
 {%- assign page_paths = site.header_pages | default: default_paths -%}
@@ -37,9 +45,16 @@ This repo contains documentation for internal use of PC Engines GmbH.
   {%- endif -%}
 {%- endfor -%}
 </ul>
-<a href="{{ "/" | relative_url }}">Site title : {{ site.title | escape }}</a>
+
+<hr>
+<hr>
+<hr>
 
 ## Top Level Pages Only
+
+<hr>
+<hr>
+<hr>
 
 <ul>
   {%- for file in filelist -%}
