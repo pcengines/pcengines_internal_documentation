@@ -31,6 +31,7 @@
 
         {%- assign topfolders = ''|split:'' -%}
         {%- for file in filelist -%}
+        <li>folder_name = {{ folder_name }}</li>
           {%- if file contains page.dir -%}
             {%- assign topfolder = file.path | split: "/" -%}
             {%- assign folder_name = topfolder[1] -%}
@@ -39,7 +40,7 @@
             {%- endunless -%}
           {%- endif -%}
         {%- endfor -%}
-
+        <li>***</li>
         {%- assign topfolders = topfolders | uniq -%}
         {%- for folder in topfolders -%}
           <li><a class="page-link" href="{{ "./" | append: folder }}">{{ folder | split: "_" | join: " " | capitalize | escape }}</a></li>
