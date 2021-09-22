@@ -24,7 +24,7 @@
         </header>
         <hr>
 
-        <h1 id="topics">{{ page.title }}</h1>
+        <h1>{{ page.title }}</h1>
         <h3>{{ page.dir }}</h3>
         
         <ul>
@@ -51,7 +51,7 @@
         </ul>
 
     
-        <h1 id="topics">Files</h1>
+        <h1>Files</h1>
         <ul>
         {%- assign filelist = site.static_files -%}
         {%- for file in filelist -%}
