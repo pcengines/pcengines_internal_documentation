@@ -41,7 +41,6 @@ This repo contains documentation for internal use of PC Engines GmbH.
 
 ## Top Level Pages Only
 
-{%- assign filelist = site.static_files  -%}
 <ul>
   {%- for file in filelist -%}
   {%- if file.path == "." -%}
