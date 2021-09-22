@@ -45,7 +45,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
 
 ## Top Folders 
 
-<ul>
+<p>
 {%- assign default_paths = site.pages | map: "path" -%}
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
@@ -54,12 +54,16 @@ This repo contains documentation for internal use of PC Engines GmbH.
 {%- for file in filelist -%}
   {%- assign topfolders = topfolders | push:file -%}
 {%- endfor -%}
-
-{%- assign topfolders = topfolders | uniq -%}
-{%- for folder in topfolders -%}
+<hr>
+{{ topfolders | join " + " }}
+<hr>
+  <ul>
+  {%- assign topfolders = topfolders | uniq -%}
+  {%- for folder in topfolders -%}
   <li>{{ folder.path }}</li>
-{%- endfor -%}
-</ul>
+  {%- endfor -%}
+  </ul>
+</p>
 
 [back](../)
 
