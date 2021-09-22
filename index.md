@@ -15,7 +15,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
 *   [ECN](./ecn/index.html)
 -->
 
-## Topics 
+## Folders 
 
 <ul>
 {%- assign filelist = site.static_files -%}
@@ -35,7 +35,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
 </ul>
 
 
-## Top Level Pages Only
+## Files
 
 
 <ul>
