@@ -54,7 +54,9 @@ This repo contains documentation for internal use of PC Engines GmbH.
 {%- for file in filelist -%}
   {%- assign topfolder = file.path  -%}
   {%- assign topfolders = topfolders | push: topfolder -%}
-   <li>{{ topfolder }} :: {{ topfolder | split: "/" | [2]}}</li>
+  {%- assign ttt = topfolder | split: "/" -%}
+   <li>{{ topfolder }} :: {{ ttt[1] }}</li>
+  }
 {%- endfor -%}
 </ul>
 <hr>
