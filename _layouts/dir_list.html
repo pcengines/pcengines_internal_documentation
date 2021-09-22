@@ -48,6 +48,20 @@
         {%- endfor -%}
         </ul>
 
+    
+        <h1 id="topics">Files</h1>
+        <ul>
+        {%- assign filelist = site.static_files -%}
+        {%- for file in filelist -%}
+          <li><a href="{{ folder_name }}">file.path = {{ file.path }} *** folder_name = {{ folder_name }}</a></li>
+          {%- assign filepath = "/" | append: file.basename | append: ".md" -%}
+          {%- if file.path == filepath -%}
+            <li><a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
+          {%- else -%}
+            <!-- <li>{{ file.path }} != {{ filepath }}<a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li> -->
+          {%- endif -%}
+        {%- endfor -%}
+        </ul>
 
         <section id="main_content">
           {{ content }}
