@@ -17,12 +17,10 @@ This repo contains documentation for internal use of PC Engines GmbH.
 
 ## All Pages 
 
-<hr>
 {%- assign filelist = site.static_files -%}
 {%- assign default_paths = site.pages | map: "path" -%}
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-<hr>
 
 <ul>
 {%- for path in page_paths -%}
@@ -33,15 +31,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
 {%- endfor -%}
 </ul>
 
-<hr>
-<hr>
-<hr>
-
 ## Top Level Pages Only
-
-<hr>
-<hr>
-<hr>
 
 <ul>
   {%- for file in filelist -%}
