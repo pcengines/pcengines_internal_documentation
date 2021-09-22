@@ -14,33 +14,16 @@ This repo contains documentation for internal use of PC Engines GmbH.
 *   [ECN](./ecn/index.html)
 
 
-## Pages in How To Folder 
-
-<hr>
-{%- assign filelist = site.static_files -%}
-<hr>
-
-<ul>
-  {%- for file in filelist -%}
-    {%- if file.path contains 'how_to' -%}
-      <li><a href="{{ site.baseurl }}/how_to/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
-    {%- endif -%}
-  {%- endfor -%}
-</ul>
-
-<hr>
-<hr>
-<hr>
 
 ## All Pages 
 
 <hr>
-<hr>
-<hr>
-
+{%- assign filelist = site.static_files -%}
 {%- assign default_paths = site.pages | map: "path" -%}
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+<hr>
+
 <ul>
 {%- for path in page_paths -%}
   {%- assign my_page = site.pages | where: "path", path | first -%}
