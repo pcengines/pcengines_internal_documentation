@@ -44,10 +44,10 @@ This repo contains documentation for internal use of PC Engines GmbH.
 {% assign filelist = site.static_files  %}
 <ul>
   {% for file in filelist %}
-  {% if file.path == '/' %}
+  {% if file.path == "." %}
     <li><a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
   {% else %}
-    <li>{{ file.path }} ::: <a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
+    <li>{{ file.path }} - <a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
   {% endif %}
   {% endfor %}
 </ul>
