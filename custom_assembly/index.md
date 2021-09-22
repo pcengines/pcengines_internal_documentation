@@ -1,3 +1,4 @@
-# Preassembly Instructions
-
-[back](../)
+---
+layout: dir_list
+title: Preassembly Instructions
+---

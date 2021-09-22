@@ -1,7 +1,4 @@
 ---
 layout: dir_list
+title: Alix Board Modifications
 ---
-
-# Alix Board Modifications
-
-[back](../)

@@ -3,7 +3,7 @@ layout: default
 ---
 # How To's
 
-This repo contains documentation for internal use of PC Engines GmbH.
+This repo contains How-To's.
 
 ## Pages
 
