@@ -64,8 +64,9 @@
         {%- for file in filelist -%}
           {%- if file.path contains page.dir -%}
 
-            {%- assign file_path = page.dir | append: file.name | strip -%}
-            {%- if file.path == page_path -%}
+            {%- assign file_path1 = file.path | strip -%}
+            {%- assign file_path2 = page.dir | append: file.name | strip -%}
+            {%- if file_path1 == page_path2 -%}
               <li>+++ <a href="{{ site.baseurl }}/{{ file.path | remove: ".md" | append: ".html" }}">{{ file.name | remove: ".md" }}</a></li>
             {%- else -%}
               <li>--- {{ file.path }} --- {{ page.dir | append: file.name }}</li>
