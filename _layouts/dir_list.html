@@ -31,6 +31,7 @@
         {%- assign topfolders = ''|split:'' -%}
 
         {%- for file in filelist -%}
+        <li>*** file = {{ file.name }} *** file.path = {{ file.path }} ***</li>
           {%- if file.path contains page.dir -%}
             {%- assign topfolder = file.path | split: "/" -%}
             {%- assign folder_name = topfolder[1] -%}
