@@ -50,12 +50,12 @@ This repo contains documentation for internal use of PC Engines GmbH.
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
 
-{% assign topfolders = ''|split:''%}
-{% for file in filelist %}
-  {% assign topfolders = topfolders|push:post%}
-{% endfor %}
+{%- assign topfolders = ''|split:'' -%}
+{%- for file in filelist -%}
+  {%- assign topfolders = topfolders | push:file -%}
+{%- endfor -%}
 
-{% assign topfolders = topfolders | uniq %}
+{%- assign topfolders = topfolders | uniq -%}
 {%- for folder in topfolders -%}
   <li>{{ folder.path }}</li>
 {%- endfor -%}
