@@ -31,10 +31,13 @@
 
         {%- assign topfolders = ''|split:'' -%}
         {%- for file in filelist -%}
-          {%- assign topfolder = file.path | split: "/" -%}
-          {%- unless topfolder[1] contains ".md" or topfolder[1] contains "LICENSE" or topfolder[1] contains "assets" or topfolder[1] contains "thumbnail.png" or topfolder[1] contains "script" or topfolder[1] contains "jekyll-theme-tactile.gemspec" or topfolder[1] contains "docs" -%}
-          {%- assign topfolders = topfolders | push: topfolder[1] -%}
-          {%- endunless -%}
+          {%- if file contains page.dir -%}
+            {%- assign topfolder = file.path | split: "/" -%}
+            {%- folder_name = topfolder[1] -%}
+            {%- unless folder_name contains ".md" or folder_name contains "LICENSE" or folder_name contains "assets" or folder_name contains "thumbnail.png" or folder_name contains "script" or folder_name contains "jekyll-theme-tactile.gemspec" or folder_name contains "docs" -%}
+            {%- assign topfolders = topfolders | push: folder_name -%}
+            {%- endunless -%}
+          {%- endif -%}
         {%- endfor -%}
 
         {%- assign topfolders = topfolders | uniq -%}
