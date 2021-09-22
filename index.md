@@ -16,7 +16,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
 ## Top Folders 
 
 <ul>
-{%- assign default_paths = site.static_files | map: "path" -%}
+{%- assign filelist = site.static_files -%}
 
 {%- assign topfolders = ''|split:'' -%}
 {%- for file in filelist -%}
@@ -40,7 +40,6 @@ This repo contains documentation for internal use of PC Engines GmbH.
 
 
 <ul>
-{%- assign filelist = site.static_files -%}
 {%- for file in filelist -%}
   {%- assign filepath = "/" | append: file.basename | append: ".md" -%}
   {%- if file.path == filepath -%}
@@ -55,6 +54,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
 ## Pages in Sub-Folders 
 
 <ul>
+{%- assign default_paths = site.static_files | map: "path" -%}
 {%- assign default_paths = site.pages | map: "path" -%}
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
