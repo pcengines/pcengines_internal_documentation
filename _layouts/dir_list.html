@@ -54,10 +54,10 @@
         {%- assign filelist = site.static_files -%}
         {%- for file in filelist -%}
           {%- if file.path contains page.dir -%}
-            <li><a href="{{ folder_name }}">file.path = {{ file.path }} *** folder_name = {{ folder_name }}</a></li>
-            {%- assign filepath = "/" | append: file.basename | append: ".md" -%}
+            {%- assign filepath = file.basename | append: ".md" -%}
+            <li><a href="{{ filepath }}">{{ file.basename }}</a></li>
             {%- if file.path == filepath -%}
-              <li><a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
+              <li><a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">+++ {{ file.basename }}</a></li>
             {%- else -%}
               <!-- <li>{{ file.path }} != {{ filepath }}<a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li> -->
             {%- endif -%}
