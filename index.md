@@ -17,19 +17,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
 ## Pages in How To Folder 
 
 <hr>
-<hr>
-<hr>
-
-This is a list of the How-To Folder
-
-<hr>
-<hr>
-<hr>
-
 {%- assign filelist = site.static_files -%}
-
-<hr>
-<hr>
 <hr>
 
 <ul>
