@@ -1,3 +1,4 @@
-# WNC Production Support
-
-[back](../)
+---
+layout: dir_list
+title: WNC Production Support
+---
