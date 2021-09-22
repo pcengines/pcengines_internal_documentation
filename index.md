@@ -15,6 +15,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
 
 ## Top Level Pages Only
 
+
 <ul>
 {%- assign filelist = site.static_files -%}
 {%- for file in filelist -%}
@@ -22,7 +23,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
   {%- if file.path == filepath -%}
     <li><a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
   {%- else -%}
-    <li>{{ file.path }} != {{ filepath }}<a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
+    <!-- <li>{{ file.path }} != {{ filepath }}<a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li> -->
   {%- endif -%}
 {%- endfor -%}
 </ul>
@@ -39,6 +40,24 @@ This repo contains documentation for internal use of PC Engines GmbH.
   {%- if my_page.title -%}
     <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
   {%- endif -%}
+{%- endfor -%}
+</ul>
+
+## Top Folders 
+
+<ul>
+{%- assign default_paths = site.pages | map: "path" -%}
+{%- assign page_paths = site.header_pages | default: default_paths -%}
+{%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+
+{% assign topfolders = ''|split:''%}
+{% for file in filelist %}
+  {% assign topfolders = topfolders|push:post%}
+{% endfor %}
+
+{% assign topfolders = topfolders | uniq %}
+{%- for folder in topfolders -%}
+  <li>{{ folder.path }}</li>
 {%- endfor -%}
 </ul>
 
