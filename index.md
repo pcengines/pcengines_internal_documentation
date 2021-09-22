@@ -46,14 +46,12 @@ This repo contains documentation for internal use of PC Engines GmbH.
 ## Top Folders 
 
 <ul>
-{%- assign default_paths = site.pages | map: "path" -%}
-{%- assign page_paths = site.header_pages | default: default_paths -%}
-{%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+{%- assign default_paths = site.static_files -%}
 
 {%- assign topfolders = ''|split:'' -%}
 {%- for file in filelist -%}
   {%- assign topfolder = file.path | split: "/" -%}
-  {%- unless topfolder[1] contains ".md" or topfolder[1] contains "LICENSE" -%}
+  {%- unless topfolder[1] contains ".md" or topfolder[1] contains "LICENSE" or topfolder[1] contains "assets" or topfolder[1] contains "LICENSE" -%}
   {%- assign topfolders = topfolders | push: topfolder[1] -%}
    <li>{{ topfolder }} :: {{ topfolder[1] }}</li>
   {%- endunless -%}
