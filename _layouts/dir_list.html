@@ -24,8 +24,8 @@
         </header>
         <hr>
         
+        page.dir = {{ page.dir }}
         <h1 id="topics">Folders</h1>
-        <!-- page.dir = {{ page.dir }} -->
         <ul>
         {%- assign filelist = site.static_files -%}
         {%- assign topfolders = ''|split:'' -%}
@@ -53,12 +53,14 @@
         <ul>
         {%- assign filelist = site.static_files -%}
         {%- for file in filelist -%}
-          <li><a href="{{ folder_name }}">file.path = {{ file.path }} *** folder_name = {{ folder_name }}</a></li>
-          {%- assign filepath = "/" | append: file.basename | append: ".md" -%}
-          {%- if file.path == filepath -%}
-            <li><a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
-          {%- else -%}
-            <!-- <li>{{ file.path }} != {{ filepath }}<a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li> -->
+          {%- if file.path contains page.dir -%}
+            <li><a href="{{ folder_name }}">file.path = {{ file.path }} *** folder_name = {{ folder_name }}</a></li>
+            {%- assign filepath = "/" | append: file.basename | append: ".md" -%}
+            {%- if file.path == filepath -%}
+              <li><a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
+            {%- else -%}
+              <!-- <li>{{ file.path }} != {{ filepath }}<a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li> -->
+            {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
         </ul>
