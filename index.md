@@ -28,7 +28,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
 
 {%- assign topfolders = topfolders | uniq -%}
 {%- for folder in topfolders -%}
-  <li><a class="page-link" href="{{ "./" | append: folder }}">{{ folder | split: "_" | join: " " | capitalize | escape }} + {{ folder.name | escape }} + {{ folder.path | escape }}</a></li>
+  <li><a class="page-link" href="{{ "./" | append: folder }}">{{ folder | split: "_" | join: " " | capitalize | escape }}</a></li>
 {%- endfor -%}
 </ul>
 
