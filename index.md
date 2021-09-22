@@ -13,7 +13,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
 *   [Board Modifications](./board_mods/index.html)
 *   [ECN](./ecn/index.html)
 
-{%- assign filelist = site.static_files  -%}
+{%- assign filelist = site.static_files -%}
 
 ## Pages in How To Folder 
 
