@@ -1,3 +1,1 @@
 # NIC Speed
-
-[back](../)

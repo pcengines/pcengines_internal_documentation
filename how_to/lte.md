@@ -1,3 +1,1 @@
 # LTE Modems
-
-[back](../)

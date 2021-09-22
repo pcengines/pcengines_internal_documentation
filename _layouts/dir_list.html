@@ -32,11 +32,9 @@
         {%- endif -%}
 
         <ul>
-        {%- if page.dir == "/" -%}
-          <li><a class="page-link" href=".">Top Directory</a></li>
-        {%- else -%}
+        {%- unless page.dir == "/" -%}
           <li><a class="page-link" href="..">Parent Directory</a></li>
-        {%- endif -%}
+        {%- endunless -%}
 
         {%- assign filelist = site.static_files -%}
         {%- assign topfolders = ''|split:'' -%}
@@ -65,13 +63,9 @@
         {%- assign filelist = site.static_files -%}
         {%- for file in filelist -%}
           {%- if file.path contains page.dir -%}
-            {%- assign filepath = file.basename | append: ".html" -%}
-            <li><a href="{{ site.baseurl }}/{{ file.path | remove: ".md" | append: ".html" }}">{{ file.path }}</a></li>
-
-            {%- if file.path == filepath -%}
-              <li><a href="{{ site.baseurl }}/{{ file.path }}/{{ file.basename | append: '.html' }}">+++ {{ file.basename }}</a></li>
-            {%- else -%}
-              <!-- <li>{{ file.path }} != {{ filepath }}<a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li> -->
+            {%- if file.path contains page.dir -%}
+              {%- assign filepath = file.basename | append: ".html" -%}
+              <li>{{ file.path }} :: {{ file.name }} <a href="{{ site.baseurl }}/{{ file.path | remove: ".md" | append: ".html" }}">{{ file.path }}</a></li>
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}

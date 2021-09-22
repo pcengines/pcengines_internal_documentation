@@ -1,3 +1,1 @@
 # Voyage Linux
-
-[back](../)

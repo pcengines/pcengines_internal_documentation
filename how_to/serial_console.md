@@ -11,5 +11,3 @@ The recommended terminal emulation program for any platform is PuTTY.
 Pressing the button S1 while powering up, temporarily enables a previously in the BIOS disabled serial console.
 
 To test if an apu board boots up, even if there is no serial console, boot it with TinyCore and a beep should be heard after about 30s-40s.
-
-[back](../)

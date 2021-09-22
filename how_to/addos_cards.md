@@ -1,3 +1,1 @@
 # Add-On Cards
-
-[back](../)
