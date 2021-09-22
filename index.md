@@ -17,12 +17,12 @@ This repo contains documentation for internal use of PC Engines GmbH.
 
 ## All Pages 
 
+<ul>
 {%- assign filelist = site.static_files -%}
 {%- assign default_paths = site.pages | map: "path" -%}
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
 
-<ul>
 {%- for path in page_paths -%}
   {%- assign my_page = site.pages | where: "path", path | first -%}
   {%- if my_page.title -%}
