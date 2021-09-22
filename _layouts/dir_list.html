@@ -33,9 +33,9 @@
 
         <ul>
         {%- if page.dir == "/" -%}
-          <li><a class="page-link" href="..">Parent Directory</a></li>
-        {%- else -%}
           <li><a class="page-link" href=".">Top Directory</a></li>
+        {%- else -%}
+          <li><a class="page-link" href="..">Parent Directory</a></li>
         {%- endif -%}
 
         {%- assign filelist = site.static_files -%}
