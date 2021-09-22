@@ -37,7 +37,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
 {%- for file in filelist -%}
   {%- assign filepath = "/" | append: file.basename | append: ".md" -%}
   {%- if file.path == filepath -%}
-    {%- unless file.path contains "" -%}
+    {%- unless file.path contains "copy" -%}
       <li><a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
     {%- endunless -%}
   {%- endif -%}
