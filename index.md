@@ -52,7 +52,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
 
 {%- assign topfolders = ''|split:'' -%}
 {%- for file in filelist -%}
-  {%- assign topfolder = file | split: "/" | first -%}
+  {%- assign topfolder = file.path | split: "/" | first -%}
    + {{ topfolder }}
   {%- assign topfolders = topfolders | push: topfolder -%}
 {%- endfor -%}
