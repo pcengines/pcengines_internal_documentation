@@ -1,4 +1,4 @@
 ---
 layout: dir_list
-title: Alix Board Modifications
+header: Alix Board Modifications
 ---
