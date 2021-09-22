@@ -64,10 +64,8 @@
         {%- for file in filelist -%}
           {%- if file.path contains page.dir -%}
 
-            {%- assign topfolder = file.path | split: page.dir -%}
-            {%- assign folder_name = topfolder[1] -%}
-            {%- assign folder_name = folder_name | split: "/" | first -%}
-            {%- if file.path == page.dir | append: file.name -%}
+            {%- assign file_path = page.dir | append: file.name | strip -%}
+            {%- if file.path == page_path -%}
               <li>+++ <a href="{{ site.baseurl }}/{{ file.path | remove: ".md" | append: ".html" }}">{{ file.name | remove: ".md" }}</a></li>
             {%- else -%}
               <li>--- {{ file.path }} --- {{ page.dir | append: file.name }}</li>
