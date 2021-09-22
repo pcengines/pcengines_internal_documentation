@@ -39,12 +39,13 @@ This repo contains documentation for internal use of PC Engines GmbH.
 
 
 <ul>
+{%- assign filelist = site.static_files -%}
 {%- for file in filelist -%}
   {%- assign filepath = "/" | append: file.basename | append: ".md" -%}
   {%- if file.path == filepath -%}
     <li><a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
   {%- else -%}
-    <li>{{ file.path }} != {{ filepath }}<a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
+    <!-- <li>{{ file.path }} != {{ filepath }}<a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li> -->
   {%- endif -%}
 {%- endfor -%}
 </ul>
