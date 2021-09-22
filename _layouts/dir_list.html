@@ -33,7 +33,7 @@
         {%- for file in filelist -%}
           {%- if file contains page.dir -%}
             {%- assign topfolder = file.path | split: "/" -%}
-            {%- folder_name = topfolder[1] -%}
+            {%- assign folder_name = topfolder[1] -%}
             {%- unless folder_name contains ".md" or folder_name contains "LICENSE" or folder_name contains "assets" or folder_name contains "thumbnail.png" or folder_name contains "script" or folder_name contains "jekyll-theme-tactile.gemspec" or folder_name contains "docs" -%}
             {%- assign topfolders = topfolders | push: folder_name -%}
             {%- endunless -%}
