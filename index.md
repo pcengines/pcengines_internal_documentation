@@ -53,7 +53,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
 {%- assign topfolders = ''|split:'' -%}
 {%- for file in filelist -%}
   {%- assign topfolder = file.path | split: "/" -%}
-  {%- unless topfolder[1] contains ".md" -%}
+  {%- unless topfolder[1] contains ".md" or topfolder[1] contains "LICENSE" -%}
   {%- assign topfolders = topfolders | push: topfolder[1] -%}
    <li>{{ topfolder }} :: {{ topfolder[1] }}</li>
   {%- endunless -%}
