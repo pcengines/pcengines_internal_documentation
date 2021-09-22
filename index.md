@@ -5,7 +5,7 @@ layout: default
 
 This repo contains documentation for internal use of PC Engines GmbH.
 
-## Topics
+## Topics 
 
 *   [How To's](./how_to/index.html)
 *   [Customer Images](./customers/index.html)
@@ -13,7 +13,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
 *   [Board Modifications](./board_mods/index.html)
 *   [ECN](./ecn/index.html)
 
-## Pages
+## Pages in How To Folder 
 
 {%- assign filelist = site.static_files  -%}
 <ul>
@@ -38,22 +38,6 @@ This repo contains documentation for internal use of PC Engines GmbH.
 {%- endfor -%}
 </ul>
 <a href="{{ "/" | relative_url }}">Site title : {{ site.title | escape }}</a>
-
-## All Pages 2
-
-{%- assign default_paths = site.pages | map: "path" -%}
-{%- assign page_paths = site.header_pages | default: default_paths -%}
-{%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-<ul>
-{%- for path in page_paths -%}
-  {%- assign my_page = site.pages | where: "path", path | first -%}
-  {%- if my_page.title -%}
-  <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
-  {%- endif -%}
-{%- endfor -%}
-</ul>
-<a href="{{ "/" | relative_url }}">Site title : {{ site.title | escape }}</a>
-
 
 ## Top Level Pages Only
 
