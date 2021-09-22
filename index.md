@@ -41,20 +41,16 @@ This repo contains documentation for internal use of PC Engines GmbH.
 
 ## Top Level Pages Only
 
-{%- assign default_paths = site.pages | map: "path" -%}
-{%- assign page_paths = site.header_pages | default: default_paths -%}
-{%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
 {% assign filelist = site.static_files  %}
 <ul>
-{%- for file in filelist -%}
-  {% if file.top-navigation %}
-    <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
-  {%- endif -%}
-{%- endfor -%}
+  {% for file in filelist %}
+  {% if file.path == '/' %}
+    <li><a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
+  {% else %}
+    <li>{{ file.path }} ::: <a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
+  {% endif %}
+  {% endfor %}
 </ul>
-<a href="{{ "/" | relative_url }}">Site title : {{ site.title | escape }}</a>
-
-
 
 [back](../)
 
