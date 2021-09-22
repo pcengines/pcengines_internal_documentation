@@ -63,9 +63,14 @@
         {%- assign filelist = site.static_files -%}
         {%- for file in filelist -%}
           {%- if file.path contains page.dir -%}
+
+            {%- assign topfolder = file.path | split: page.dir -%}
+            {%- assign folder_name = topfolder[1] -%}
+            {%- assign folder_name = folder_name | split: "/" | first -%}
+
             {%- if file.path contains page.dir -%}
               {%- assign filepath = file.basename | append: ".html" -%}
-              <li>{{ file.path }} :: {{ file.name }} <a href="{{ site.baseurl }}/{{ file.path | remove: ".md" | append: ".html" }}">{{ file.path }}</a></li>
+              <li>{{ file.path }} :: {{ file.name }} :: {{ file.basename }} :: {{ file.extname }} <a href="{{ site.baseurl }}/{{ file.path | remove: ".md" | append: ".html" }}">{{ file.path }}</a></li>
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
