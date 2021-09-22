@@ -16,6 +16,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
 ## Top Level Pages Only
 
 <ul>
+{%- assign filelist = site.static_files -%}
 {%- for file in filelist -%}
   {%- assign filepath = "/" | append: file.basename | append: ".md" -%}
   {%- if file.path == filepath -%}
@@ -29,7 +30,6 @@ This repo contains documentation for internal use of PC Engines GmbH.
 ## Pages in Sub-Folders 
 
 <ul>
-{%- assign filelist = site.static_files -%}
 {%- assign default_paths = site.pages | map: "path" -%}
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
