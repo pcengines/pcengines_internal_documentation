@@ -13,13 +13,25 @@ This repo contains documentation for internal use of PC Engines GmbH.
 *   [Board Modifications](./board_mods/index.html)
 *   [ECN](./ecn/index.html)
 
-End Topics 
 
 ## Pages in How To Folder 
 
+<hr>
+<hr>
+<hr>
+
 This is a list of the How-To Folder
 
+<hr>
+<hr>
+<hr>
+
 {%- assign filelist = site.static_files -%}
+
+<hr>
+<hr>
+<hr>
+
 <ul>
   {%- for file in filelist -%}
     {%- if file.path contains 'how_to' -%}
