@@ -28,10 +28,10 @@
         page.dir = {{ page.dir }}
         <ul>
         {%- assign filelist = site.static_files -%}
-
         {%- assign topfolders = ''|split:'' -%}
+
         {%- for file in filelist -%}
-          {%- if file contains page.dir -%}
+          {%- if file.path contains page.dir -%}
             {%- assign topfolder = file.path | split: "/" -%}
             {%- assign folder_name = topfolder[1] -%}
         <li>folder_name = {{ folder_name }}</li>
