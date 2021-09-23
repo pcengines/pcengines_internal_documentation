@@ -1,8 +1,8 @@
 ---
 layout: dir_list
 title: PC Engines - Internal Documentation 
+description: This is a collection of manuals and instructions for internal and external use.
 ---
-
 <!-- 
 ## Topics 
 
@@ -65,8 +65,3 @@ title: PC Engines - Internal Documentation
 </ul>
 
  -->
-
- [back](../)
-
-
-{{ site.time }}
