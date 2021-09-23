@@ -1,4 +1,4 @@
-# This repository contains pcengines_internal_documentation page files.
+# This repository contains documentation page files.
 
 #### To create a new post
 
