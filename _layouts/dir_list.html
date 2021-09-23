@@ -70,8 +70,8 @@
             {%- if file_path3 == "" -%}
               <li>+++ <a href="{{ site.baseurl }}/{{ file.path | remove: ".md" | append: ".html" }}">{{ file.name | remove: ".md" }}</a></li>
             {%- else -%}
-              <li>---{{ file_path2 }}---{{ file_path3 }}---</li>
-              <li>file.path = {{ file.path }} :: page.dir = {{ page.dir }} :: {{ file.name }} :: {{ file.basename }} :: {{ file.extname }} <a href="{{ site.baseurl }}/{{ file.path | remove: ".md" | append: ".html" }}">{{ file.path }}</a></li>
+              <!-- <li>---{{ file_path2 }}---{{ file_path3 }}---</li> -->
+              <!-- <li>file.path = {{ file.path }} :: page.dir = {{ page.dir }} :: {{ file.name }} :: {{ file.basename }} :: {{ file.extname }} <a href="{{ site.baseurl }}/{{ file.path | remove: ".md" | append: ".html" }}">{{ file.path }}</a></li> -->
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
