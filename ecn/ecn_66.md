@@ -1,7 +1,7 @@
 # PC Engines ECN #066
 11/15/2019
 
-# Board: 
+## Board: 
 
 * apu2a, apu2b, apu2c, apu2d, apu2e
 * apu3a, apu3b, apu3c
