@@ -3,7 +3,9 @@ layout: dir_list
 title: PC Engines - Internal Documentation 
 description: This is a collection of manuals and instructions for internal and external use.
 ---
+
 Please also see [apu2-documentation](https://pcengines.github.io/apu2-documentation/).
+
 <!-- 
 ## Topics 
 
@@ -13,6 +15,7 @@ Please also see [apu2-documentation](https://pcengines.github.io/apu2-documentat
 *   [Board Modifications](./board_mods/index.html)
 *   [ECN](./ecn/index.html)
 -->
+
 <!-- 
 ## Folders 
 
@@ -66,3 +69,4 @@ Please also see [apu2-documentation](https://pcengines.github.io/apu2-documentat
 </ul>
 
  -->
+
