@@ -32,7 +32,7 @@
         {%- if page.dir == "/" -%}
         <h3>&nbsp;</h3>
         {%- else -%}
-        <!-- <h3>{{ page.dir }}</h3> -->
+        <h3>Index of {{ page.dir }}</h3>
         {%- endif -%}
 
 
@@ -65,7 +65,7 @@
     
         {%- unless page.dir == "/" -%}
         <h1>Documents</h1>
-        <ul>
+        <ul style="list-style-type:none;">
         {%- assign filelist = site.static_files -%}
         {%- for file in filelist -%}
           {%- if file.path contains page.dir -%}
