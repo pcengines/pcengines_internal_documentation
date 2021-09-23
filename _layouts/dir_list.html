@@ -31,6 +31,11 @@
         <h3>{{ page.dir }}</h3>
         {%- endif -%}
 
+        <section id="main_content">
+          {{ content }}
+        </section>
+
+
         <ul>
         {%- unless page.dir == "/" -%}
           <li><a class="page-link" href="..">Parent Directory</a></li>
@@ -78,10 +83,6 @@
           {%- endif -%}
         {%- endfor -%}
         </ul>
-
-        <section id="main_content">
-          {{ content }}
-        </section>
 
         <footer>
         {% if site.github.is_project_page %}
