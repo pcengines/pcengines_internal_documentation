@@ -5,8 +5,8 @@
 ## Boards
 The lpc1a is needed for the following boards as an alternative BIOS if on-board BIOS is not functional.
 
-* alix boards
-* apu1 boards
+  * alix boards
+  * apu1 boards
 
 ## Flash ROM size
 The apu1 boards have a 16Mbit (2MB) flash chip and the BIOS files need to be the same size.
