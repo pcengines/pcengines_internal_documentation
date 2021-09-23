@@ -20,14 +20,12 @@
 
         <header>
           <!-- <h1><a href="../">{{ page.title | default: site.title | default: site.github.repository_name }}</a></h1> -->
-          <h2><a href="{{ "/" | relative_url }}">{{ page.description | default: site.description | default: site.github.project_tagline }}</a></h2>
+          <!-- <h2><a href="{{ "/" | relative_url }}">{{ page.description | default: site.description | default: site.github.project_tagline }}</a></h2> -->
         </header>
-        <hr>
+        <!-- <hr> -->
 
         <h1>{{ page.title }}</h1>
-        {%- if page.description  -%}
-        <em>{{ page.description }}</em>
-        {%- endif -%}
+        <em>{{ page.description | default: site.description | default: site.github.project_tagline }}</em>
 
         <section id="main_content">
           {{ content }}
