@@ -12,6 +12,8 @@ The spi1a is needed for the following boards as an alternative BIOS if on-board 
 
 ## Flashing the lpc1a
 
+Boot TinyCore Linux and run:
+
 `flashrom -w apu2_${latest_bios_version}.rom -p internal:recovery_dongle=SPI`
 
 ## Image
