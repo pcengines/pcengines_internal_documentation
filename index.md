@@ -1,9 +1,7 @@
 ---
 layout: dir_list
+title: PC Engines - Internal Documentation 
 ---
-# PC Engines - Internal Documentation
-
-This repo contains documentation for internal use of PC Engines GmbH.
 
 <!-- 
 ## Topics 
@@ -14,7 +12,7 @@ This repo contains documentation for internal use of PC Engines GmbH.
 *   [Board Modifications](./board_mods/index.html)
 *   [ECN](./ecn/index.html)
 -->
-
+<!-- 
 ## Folders 
 
 <ul>
@@ -44,12 +42,11 @@ This repo contains documentation for internal use of PC Engines GmbH.
   {%- assign filepath = "/" | append: file.basename | append: ".md" -%}
   {%- if file.path == filepath -%}
     <li><a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li>
-  {%- else -%}
-    <!-- <li>{{ file.path }} != {{ filepath }}<a href="{{ site.baseurl }}/{{ file.basename | append: '.html' }}">{{ file.basename }}</a></li> -->
   {%- endif -%}
 {%- endfor -%}
 </ul>
 
+ -->
 <!-- 
 ## Pages in Sub-Folders 
 
