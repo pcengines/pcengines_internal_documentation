@@ -5,12 +5,12 @@
 ## Boards
 The spi1a is needed for the following boards as an alternative BIOS if on-board BIOS is not functional.
 
-* apu2
-* apu3
-* apu4
-* apu5
-* apu6
-* apu7
+  * apu2
+  * apu3
+  * apu4
+  * apu5
+  * apu6
+  * apu7
 
 ## Flashing the lpc1a
 
