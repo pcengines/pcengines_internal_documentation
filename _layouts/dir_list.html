@@ -25,15 +25,19 @@
         <hr>
 
         <h1>{{ page.title }}</h1>
-        {%- if page.dir == "/" -%}
-        <h3>&nbsp;</h3>
-        {%- else -%}
-        <h3>{{ page.dir }}</h3>
+        {%- if page.description  -%}
+        <em>{{ page.description }}</em>
         {%- endif -%}
 
         <section id="main_content">
           {{ content }}
         </section>
+
+        {%- if page.dir == "/" -%}
+        <h3>&nbsp;</h3>
+        {%- else -%}
+        <h3>{{ page.dir }}</h3>
+        {%- endif -%}
 
 
         <ul>
