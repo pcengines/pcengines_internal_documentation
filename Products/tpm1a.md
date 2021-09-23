@@ -10,6 +10,46 @@ The tpm1a can be used with
 
 ## Testing the tpm1a module
 
+```java
+#!/bin/bash
+
+display_usage() { 
+  echo -e "\nUsage:$0 /dev/ttyUSB[0 .. n] \n" 
+  } 
+
+# if less than one arguments supplied, display usage 
+  if [  $# -le 0 ] 
+  then 
+    display_usage
+    exit 1
+  fi 
+ 
+# check whether user had supplied -h or --help . If yes display usage 
+  if [[ ( $# == "--help") ||  $# == "-h" ]] 
+  then 
+    display_usage
+    exit 0
+  fi 
+ 
+######################################################################
+# starting here ...
+######################################################################
+exec 4<$1 5>$1
+stty -F $1 115200 -echo
+
+while :
+do
+  read reply <&4
+  echo "$reply"
+  f10=`echo $reply | grep -i "F10" |head -c 9`
+  #echo F10=$f10
+  if [ "$f10" = "Press F10" ]; then
+    echo "sending F10"
+    tput kf10  >&5
+  fi
+done
+
+```
 ## Programming the tpm1a module
 
 ## Image
