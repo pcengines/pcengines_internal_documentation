@@ -14,5 +14,5 @@ Also see [Asciinema Sharing & embedding](https://asciinema.org/docs/embedding)
 
 This one is stored in the repo [AEVKUjbdC6TWDLXSp8ztXjte9.cast](/assets/asciinema/AEVKUjbdC6TWDLXSp8ztXjte9.cast)
 
-<asciinema-player autoplay=true loop=true src="/master/assets/asciinema/AEVKUjbdC6TWDLXSp8ztXjte9.cast"></asciinema-player>
+<asciinema-player autoplay=true loop=true src="/assets/AEVKUjbdC6TWDLXSp8ztXjte9.cast"></asciinema-player>
 
