@@ -15,6 +15,8 @@ For use with smaller 8Mbit (1MB) flash chips use this minimized BIOS version:
 
 ## Flashing the lpc1a
 
+Boot TinyCore Linux and run:
+
 `flashrom -w apu1_${latest_bios_version}.rom -p internal:recovery_dongle=LPC`
 
 ## Image
