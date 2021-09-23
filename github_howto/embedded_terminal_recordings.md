@@ -12,7 +12,4 @@ Also see [Asciinema Sharing & embedding](https://asciinema.org/docs/embedding)
 
 <asciinema-player autoplay=true loop=true src="https://asciinema.org/a/AEVKUjbdC6TWDLXSp8ztXjte9.cast"></asciinema-player>
 
-This one is stored in the repo [AEVKUjbdC6TWDLXSp8ztXjte9.cast](/assets/asciinema/AEVKUjbdC6TWDLXSp8ztXjte9.cast)
-
-<asciinema-player autoplay=true loop=true src="/assets/AEVKUjbdC6TWDLXSp8ztXjte9.cast"></asciinema-player>
 

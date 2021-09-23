@@ -1,7 +1,0 @@
-{"version": 2, "width": 173, "height": 46, "timestamp": 1632391468, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}}
-[0.151605, "o", "\u001b]0;michael@thinkpad-x270: ~/github/pcengines_internal_documentation\u0007\u001b[01;32mmichael@thinkpad-x270\u001b[00m:\u001b[01;34m~/github/pcengines_internal_documentation\u001b[00m$ "]
-[1.245254, "o", "git pull"]
-[2.35087, "o", "\r\n"]
-[3.7495, "o", "Bereits aktuell.\r\n"]
-[3.824432, "o", "\u001b]0;michael@thinkpad-x270: ~/github/pcengines_internal_documentation\u0007\u001b[01;32mmichael@thinkpad-x270\u001b[00m:\u001b[01;34m~/github/pcengines_internal_documentation\u001b[00m$ "]
-[5.900284, "o", "exit\r\n"]
