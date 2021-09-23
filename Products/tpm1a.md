@@ -8,13 +8,22 @@ The tpm1a can be used with
 
   * apu2
 
-## Testing the tpm1a module
+## Upgrading tpm1a firmware
+
+```bash
+#!/bin/bash
+
+./TPMFactoryUpd -update tpm20-emptyplatformauth -firmware TPM20_5.61.2785.0_to_TPM20_5.63.3144.0.BIN
+
+```
+
+## Testing tpm1a module
+(update script from test-setup)
 
 ```bash
 #!/bin/bash
 
 ./TPMFactoryUpd -info 
-
 
 ```
 ## Programming the tpm1a module
