@@ -63,7 +63,11 @@
         {%- assign filelist = site.static_files -%}
         {%- for file in filelist -%}
           {%- if file.path contains page.dir -%}
-            {%- if file.path | remove_first: page.dir | append: file.name == "" -%}
+
+            {%- assign file_path2 = page.dir | append: file.name -%}
+            {%- assign file_path3 = file.path | remove_first: file_path2 -%}
+
+            {%- if file_path3 == "" -%}
               <li>+++ <a href="{{ site.baseurl }}/{{ file.path | remove: ".md" | append: ".html" }}">{{ file.name | remove: ".md" }}</a></li>
             {%- else -%}
               <li>---{{ file_path2 }}---{{ file_path3 }}---</li>
