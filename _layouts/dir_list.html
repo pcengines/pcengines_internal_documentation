@@ -36,9 +36,9 @@
         {%- endif -%}
 
 
-        <ul>
+        <p>
         {%- unless page.dir == "/" -%}
-          <li><a class="page-link" href="..">Parent Directory</a></li>
+          <a class="page-link" href="..">Parent Directory</a>
         {%- endunless -%}
 
         {%- assign filelist = site.static_files -%}
@@ -58,14 +58,14 @@
         {%- endfor -%}
         {%- assign topfolders = topfolders | uniq -%}
         {%- for folder in topfolders -%}
-          <li><a class="page-link" href="{{ "./" | append: folder }}">{{ folder | split: "_" | join: " " | escape }}</a></li>
+          <a class="page-link" href="{{ "./" | append: folder }}">{{ folder | split: "_" | join: " " | escape }}</a><br>
         {%- endfor -%}
-        </ul>
+        </p>
 
     
         {%- unless page.dir == "/" -%}
         <h1>Documents</h1>
-        <ul style="list-style-type:none;">
+        <p>
         {%- assign filelist = site.static_files -%}
         {%- for file in filelist -%}
           {%- if file.path contains page.dir -%}
@@ -75,7 +75,7 @@
               {%- assign file_path3 = file.path | remove_first: file_path2 -%}
 
               {%- if file_path3 == "" -%}
-                <li><a href="{{ site.baseurl }}/{{ file.path | replace: ".md",  ".html" }}">{{ file.name | remove: ".md" }}</a></li>
+                <a href="{{ site.baseurl }}/{{ file.path | replace: ".md",  ".html" }}">{{ file.name | remove: ".md" }}</a><br>
               {%- else -%}
                 <!-- <li>---{{ file_path2 }}---{{ file_path3 }}---</li> -->
                 <!-- <li>file.path = {{ file.path }} :: page.dir = {{ page.dir }} :: {{ file.name }} :: {{ file.basename }} :: {{ file.extname }} <a href="{{ site.baseurl }}/{{ file.path | remove: ".md" | append: ".html" }}">{{ file.path }}</a></li> -->
@@ -83,7 +83,7 @@
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
-        </ul>
+        </p>
         {%- endunless -%}
 
         <footer>
