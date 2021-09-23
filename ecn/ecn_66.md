@@ -12,11 +12,14 @@
 ## Intention: 
 Avoid cold temperature startup problems.
 
-Effective: Immediate
+## Effective: 
+Immediate
 
-Issue: VNB supply insufficient for power-up surge with some AMD SOCs at low temperature (e.g. with cooling spray).
+# Issue: 
+VNB supply insufficient for power-up surge with some AMD SOCs at low temperature (e.g. with cooling spray).
 
-Change: Change resistor value in feedback network from 4.99 k to 30k ohm.
+# Change: 
+Change resistor value in feedback network from 4.99 k to 30k ohm.
 
 See schematic page 16.
 
