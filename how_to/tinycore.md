@@ -1,7 +1,8 @@
 # TinyCore
 
-Testing [https://asciinema.org/](https://asciinema.org/)
+Testing embedded terminal recording :tv: :movie_camera: [https://asciinema.org/](https://asciinema.org/)
 
+Usage: add a `<asciinema-player>` tag and add `.cast` to the URL.
 
 <asciinema-player autoplay=true src="https://asciinema.org/a/zCvjeHHwMt70RHJn6l81XjLn0.cast"></asciinema-player>
 
