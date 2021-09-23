@@ -1,16 +1,20 @@
 # tpm1a
 
-## Boards
-The spi1a is needed for the following boards as an alternative BIOS if on-board BIOS is not functional.
+## Usage
+See (https://pcengines.github.io/apu2-documentation/tpm_menu/)[https://pcengines.github.io/apu2-documentation/tpm_menu/]
+
+## Board compatibility
+The tpm1a can be used with
 
   * apu2
 
-## Programming the lpc1a
+## Testing the tpm1a module
 
+## Programming the tpm1a module
 
 ## Image
-![image](https://user-images.githubusercontent.com/18163327/134548760-8ed0f05b-66a5-41f6-9f8e-6654ae575674.png)
+![image](https://user-images.githubusercontent.com/18163327/134554757-9f0c7839-5f78-4a8d-ad67-28006a9fbbff.png)
 
 ## Schematics
-![image](https://user-images.githubusercontent.com/18163327/134549451-f96c0efa-2bb8-4f8f-b46a-61b3df992035.png)
+![image](https://user-images.githubusercontent.com/18163327/134555256-a5d446c7-f6f0-4c22-9d95-86398d6b7be1.png)
 
