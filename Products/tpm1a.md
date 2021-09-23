@@ -1,7 +1,7 @@
 # tpm1a
 
 ## Usage
-See (https://pcengines.github.io/apu2-documentation/tpm_menu/)[https://pcengines.github.io/apu2-documentation/tpm_menu/]
+See [https://pcengines.github.io/apu2-documentation/tpm_menu/](https://pcengines.github.io/apu2-documentation/tpm_menu/)
 
 ## Board compatibility
 The tpm1a can be used with
@@ -10,7 +10,7 @@ The tpm1a can be used with
 
 ## Testing the tpm1a module
 
-```java
+```bash
 #!/bin/bash
 
 display_usage() { 
